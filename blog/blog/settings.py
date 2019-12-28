@@ -25,7 +25,7 @@ SECRET_KEY = 'pkjf5w#fi8bpx)%=&g7g33e(-td20$my=%mkr9xmzljldj_--^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['165.22.60.142']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -120,3 +120,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Menampilkan JSON sebagai hasil output
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': (
+#         'rest_framework.renderers.JSONRenderer',
+#     ),
+#     'DEFAULT_PARSER_CLASSES': (
+#         'rest_framework.parsers.JSONParser',
+#     )
+# }

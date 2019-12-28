@@ -21,23 +21,7 @@ class PostCreateView(generics.CreateAPIView):
             "result": request.data
         }
         return Response(response)
-
-
-class PostDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Post.objects.all()
-    serializer_class = serializers.PostSerializer
-
-    def retrieve(self, request, *args, **kwargs):
-        super(PostDetailView, self).retrieve(request, args, kwargs)
-        instance = self.get_object()
-        serializer = self.get_serializer(instance)
-        data = serializer.data
-        response = {
-            "status_code": status.HTTP_200_OK,
-            "message": "Successfully retrieved",
-            "result": data
-        }
-        return Response(response)
+        
 
 class PostDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
